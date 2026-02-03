@@ -1,0 +1,6 @@
+@import "tailwindcss";
+.text-indigo-600,
+.text-blue-500,
+.text-blue-600 {
+  color: #2A3492 !important;
+}
