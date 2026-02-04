@@ -92,7 +92,7 @@ export default function Comingsoon() {
         <img src={Logo} alt="Zellroo" className="h-16 w-auto" />
 
         <a
-          href="mailto:arshathda00@gmail.com"
+          href="mailto:zellroo.new@gmail.com"
           target="_blank"
           className="text-indigo-600 hover:text-gray-700 text-md font-medium"
         >
