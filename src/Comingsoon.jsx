@@ -88,13 +88,13 @@ export default function Comingsoon() {
   return (
     <div className="min-h-screen bg-linear-to-br from-[#2A3492]/20 via-white to-[#FFC107]/25 flex flex-col">
       {/* Navbar */}
-      <header className="flex items-center justify-between px-10 py-6">
-        <img src={Logo} alt="Zellroo" className="h-16 w-auto" />
+      <header className="flex items-center justify-between px-4 py-3 md:px-10 md:py-6">
+        <img src={Logo} alt="Zellroo" className="h-8 md:h-16 w-auto" />
 
         <a
           href="mailto:zellroo.new@gmail.com"
           target="_blank"
-          className="text-indigo-600 hover:text-gray-700 text-md font-medium"
+          className="text-indigo-600 hover:text-gray-700 text-sm md:text-md font-medium"
         >
           Contact
         </a>
@@ -107,10 +107,10 @@ export default function Comingsoon() {
           Coming Soon
         </span>
 
-        <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900">
+        <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900">
           We’re Launching
         </h2>
-        <h3 className="mt-2 text-5xl md:text-6xl font-extrabold text-indigo-600">
+        <h3 className="mt-2 text-4xl md:text-6xl font-extrabold text-indigo-600">
           Something Amazing
         </h3>
 
@@ -120,11 +120,11 @@ export default function Comingsoon() {
         </p>
 
         {/* Countdown */}
-        <div className="flex gap-6 mt-10 flex-wrap justify-center">
+        <div className="grid grid-cols-2 md:flex gap-4 md:gap-6 mt-10">
           {["days", "hours", "minutes", "seconds"].map((unit) => (
             <div
               key={unit}
-              className="w-28 p-6 bg-white rounded-2xl shadow text-center"
+              className="w-full md:w-28 p-5 bg-white rounded-2xl shadow text-center"
             >
               <p className="text-3xl font-bold text-indigo-600">
                 {timeLeft[unit]}
@@ -137,20 +137,23 @@ export default function Comingsoon() {
         </div>
 
         {/* Email */}
-        <form onSubmit={sendEmail} className="flex gap-4 mt-8">
+        <form
+          onSubmit={sendEmail}
+          className="flex flex-col md:flex-row gap-4 mt-8 w-full max-w-xl"
+        >
           <input
             type="email"
             required
             placeholder="Enter your email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="px-6 py-4 rounded-full border w-80 focus:outline-none"
+            className="px-6 py-4 rounded-full border w-full focus:outline-none"
           />
           <button
-            type="submit"
-            className="px-8 py-4 rounded-full text-white bg-[#2A3492] font-semibold hover:opacity-90 transition cursor-pointer"
+          type="submit"
+          className="px-8 py-4 rounded-full text-white bg-[#2A3492] font-semibold hover:opacity-90 transition w-full md:w-auto"
           >
-            Notify Me
+          Notify Me
           </button>
         </form>
 
